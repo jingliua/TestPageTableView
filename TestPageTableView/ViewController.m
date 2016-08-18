@@ -38,10 +38,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.view.backgroundColor = [UIColor grayColor];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+//    self.tableView.backgroundColor = [UIColor greenColor];
     
     dataAry = [NSMutableArray array];
+    isRequest=NO;
+    
     UIView *refreshViewHeader =[self RefreshViewHeader];
     [self.tableView addSubview:refreshViewHeader];
 }
@@ -87,7 +92,7 @@
     CustomTableViewCell *cell =(CustomTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCellid" forIndexPath:indexPath];
     NSDictionary *dic = dataAry[indexPath.row];
     cell.titleLabel.text = dic[@"title"];
-    cell.contentView.backgroundColor = [UIColor clearColor];
+//    cell.contentView.backgroundColor = [UIColor brownColor];
     return cell;
 }
 
@@ -213,13 +218,15 @@
                     labHeader.text = @"释放立即刷新";
                 }
             }
+            
         }else if (point.y < 0 && point.y >= -pullRefreshLabelHeight){
-            if (!isRequest || dataAry.count == 0) {
+//            if (!isRequest || dataAry.count == 0) {//这句话使得第一次下拉时正在刷新不停留显示
+            if (!isRequest) {
                 [headerActivityView stopAnimating];
                 headerActivityView.hidden = YES;
                 labHeader.text = @"下拉刷新";
                 scrollView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
-            }else{
+            }else{//正在请求或者已经有数据
                 scrollView.contentInset = UIEdgeInsetsMake(pullRefreshLabelHeight, 0.0f, 0.0f, 0.0f);
             }
         }else{
