@@ -226,7 +226,7 @@
                 headerActivityView.hidden = YES;
                 labHeader.text = @"下拉刷新";
                 scrollView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
-            }else{//正在请求或者已经有数据
+            }else{
                 scrollView.contentInset = UIEdgeInsetsMake(pullRefreshLabelHeight, 0.0f, 0.0f, 0.0f);
             }
         }else{
