@@ -46,7 +46,7 @@
     
     dataAry = [NSMutableArray array];
     isRequest=NO;
-    
+//    self.tableView.contentInset = UIEdgeInsetsMake(52, 0.0f, 0.0f, 0.0f);
     UIView *refreshViewHeader =[self RefreshViewHeader];
 //    self.tableView.tableHeaderView = refreshViewHeader;
     [self.tableView addSubview:refreshViewHeader];
