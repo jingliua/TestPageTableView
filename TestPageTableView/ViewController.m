@@ -135,7 +135,6 @@
         [dataAry removeAllObjects];
     }
     [dataAry addObjectsFromArray:arr];
-    [self.tableView reloadData];
     indexPage++;
     
     if (dataAry.count >= dataCount) {//当所有数据已经分几页拉完了
@@ -145,8 +144,9 @@
     }else{
         self.tableView.tableFooterView = nil;
     }
-    isRequest = NO;
     [self closePull];
+    isRequest = NO;
+    [self.tableView reloadData];
 }
 
 
