@@ -48,6 +48,7 @@
     isRequest=NO;
     
     UIView *refreshViewHeader =[self RefreshViewHeader];
+//    self.tableView.tableHeaderView = refreshViewHeader;
     [self.tableView addSubview:refreshViewHeader];
 }
 
@@ -144,7 +145,7 @@
     }else{
         self.tableView.tableFooterView = nil;
     }
-    [self closePull];
+    [self closePull];//这句话去掉的话则refreshViewHeader不会上滑到顶，会停留在pullRefreshLabelHeight处
     isRequest = NO;
     [self.tableView reloadData];
 }
