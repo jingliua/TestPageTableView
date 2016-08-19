@@ -208,6 +208,7 @@
 #pragma  mark -  UIScrollView Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGPoint point = [scrollView contentOffset];
+    NSLog(@"scrollViewDidScroll point is %@",NSStringFromCGPoint(point));
     //下拉刷新
     {
         if (point.y < -pullRefreshLabelHeight) {
@@ -255,6 +256,7 @@
 {
     
     CGPoint point = [scrollView contentOffset];
+    NSLog(@"scrollViewDidEndDragging point is %@",NSStringFromCGPoint(point));
     if (point.y <= -pullRefreshLabelHeight && !isRequest) {
         indexPage = 0;
         isRefresh = YES;

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pCO-M2-pei">
-                                <rect key="frame" x="0.0" y="40" width="600" height="560"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCellid" id="PvM-uu-6ek" customClass="CustomTableViewCell">
@@ -36,7 +36,7 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pCO-M2-pei" secondAttribute="bottom" id="IeP-rN-s4n"/>
                             <constraint firstAttribute="trailing" secondItem="pCO-M2-pei" secondAttribute="trailing" id="TFy-Ip-dkC"/>
-                            <constraint firstItem="pCO-M2-pei" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="qSP-ui-Gyj"/>
+                            <constraint firstItem="pCO-M2-pei" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qSP-ui-Gyj"/>
                             <constraint firstItem="pCO-M2-pei" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="see-3Z-fNy"/>
                         </constraints>
                     </view>
